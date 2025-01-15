@@ -1,0 +1,69 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Estilo do grid */
+.content-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr; /* Mobile First: 1 coluna */
+  /* grid-template-rows: repeat(6, 1fr); */
+}
+
+.grid-item {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.grid-item h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.grid-item p {
+  color: #666;
+}
+
+/* Media Queries para tablets -> largura mínima de 600px para cima */
+@media (min-width: 600px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Media Queries para desktops -> largura mínima de 900px para cima */
+@media (min-width: 900px) {
+  .content-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  }
+}
+
+/* Media Queries para desktops big -> largura mínima de 1200px para cima */
+@media (min-width: 1200px) {
+  .content-grid {
+    grid-template-columns: repeat(4, 1fr); /* 3 colunas */
+  }
+}
