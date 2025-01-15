@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Variables */
+:root {
+  --primary: #0062ff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: border-box;
+
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "Nunito", sans-serif;
+
+}
+
+body {
+  /* background-image: url('https://images.pexels.com/photos/29609562/pexels-photo-29609562/free-photo-of-serene-dense-forest-with-single-yellow-tree-highlight.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply; */
+
+  min-height: 100vh;
+  /* height: 200vh; vh -> View Height */
+  width: 100vw; /* vh -> View Width */
+
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%) no-repeat;
+}
+
+/* Logo */
+#logo {
+  /* color: red; */
+  /* color: #ff0000; */
+  color: #0062ffab;
+  /* color: hsl(0, 100%, 50%); */
+  /* color: hwb(0 0% 0%); */
+  /* color: rgb(255, 0, 0); */
+  /* color: rgba(255, 0, 0, 0.813); */
+}
+
+header {
+  display: flex;
+  padding: 20px 60px;
+  /* justify-content: space-between; */
+}
+
+/* SASS, LESS, SCSS */
+header nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+
+  li {
+    /* margin-left: 10px; */
+    padding: 5px 10px;
+    cursor: pointer;
+
+    background-color: #0062ff;
+    border-radius: 15px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* &:hover {
+      background-color: #0062ffab;
+    } */
+  }
+}
+
+header nav ul li:first-child {
+  margin-left: 0px;
+}
+
+header nav ul li:hover {
+  background-color: #03327d;
+}
+
+/* Banner */
+.banner {
+  width: 50%;
+  background-color: #ff0000;
+  border: 10px solid green;
+  margin: 50px;
+  padding: 5px 10px 15px;
+
+  h1 {
+    color: var(--primary);
+    font-size: 1.2rem; /* x16px x9px*/
+    /* px, rem, em e % */
+
+    &.banner-title {
+      color: purple;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+/* less css ou SCSS ou SASS -> pré-processadore css*/
+
+/* .banner h1 {
+  color: white;
+} */
+
+/* Padding e Margin */
+/* 
+  margin: 10px; -> 10px cima, baixo, esq e dir
+  margin: 5px 10px; -> 5px cima e baixo & 10px esq e dir
+  margin: 5px 10px 15px; -> 5px cima & 10px esq e dir & 15px baixo 
+  margin: 5px 10px 15px 20px; -> 5px cima & 10px dir & 15px baixo & 20px esq 
+*/
+
+main {
+  display: flex;
+}
+
+article p {
+  color: #0a0a8f;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+
+  margin-top: 20px;
+  margin-right: 60px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+
+  /* margin: 20px 60px 10px 40px; */
+}
+
+/* Media Queries -> Tamanho no máximo de 700px */
+@media screen and (max-width: 700px) {
+  .banner {
+    margin: 10px;
+    width: 100%;
+  }
+
+  main {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  margin: 10px;
+  outline: none
+}
+
+input:focus {
+  border: 3px solid #00ff3c !important;
+}
+
+input:required {
+  border: 3px solid red;
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+
+input::before {
+  content: '->';
+  position: absolute;
+  left: 0px;
+  top: -0px;
+  border: 5px solid red;
+  width: 5px;
+  height: 5px;
+}
+
+li::marker {
+    color: purple;
+    font-size: .5em;
+}
